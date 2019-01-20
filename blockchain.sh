@@ -12,5 +12,5 @@ rm bc.sf-part1
 rm bc.sf-part2
 rm bc.sf-part3
 rm bc.sf-part4
-unzip -o ~/blockchain.zip -d ~/.snowgem
-rm ~/blockchain.zip
+unzip -o blockchain.zip -d ~/.snowgem
+rm blockchain.zip
