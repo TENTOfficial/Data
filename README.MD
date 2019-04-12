@@ -10,3 +10,9 @@ sudo apt-get install \
       autoconf libtool ncurses-dev unzip git python python-zmq \
       zlib1g-dev wget bsdmainutils automake curl gpw nodejs npm
 ```
+
+Run
+```
+npm install
+```
+to install node package
