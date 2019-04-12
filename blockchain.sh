@@ -15,4 +15,4 @@ if [ ! -f blockchain.zip ]; then
   rm bc.sf-part4
   unzip -o blockchain.zip -d ~/.snowgem
   rm blockchain.zip
- fi
+fi
