@@ -7,8 +7,8 @@ wget -N https://github.com/Snowgem/Data/releases/download/0.0.1/blockchain_snowg
 wget -N https://github.com/Snowgem/Data/releases/download/0.0.1/blockchain_snowgem_index.zip.sf-part3 -O bc.sf-part3
 wget -N https://github.com/Snowgem/Data/releases/download/0.0.1/blockchain_snowgem_index.zip.sf-part4 -O bc.sf-part4
 npm install
-node joinfile.js
 if [ ! -f blockchain.zip ]; then
+  node joinfile.js
   rm bc.sf-part1
   rm bc.sf-part2
   rm bc.sf-part3
