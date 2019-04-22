@@ -2,6 +2,15 @@ if [ ! -d ~/.snowgem ]; then
   mkdir ~/.snowgem
 fi
 
+sudo apt-get update
+sudo apt-get install \
+      build-essential pkg-config libc6-dev m4 g++-multilib \
+      autoconf libtool ncurses-dev unzip git python python-zmq \
+      zlib1g-dev wget bsdmainutils automake curl gpw curl npm
+
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install nodejs -y
+
 wget -N https://github.com/Snowgem/Data/releases/download/0.0.1/blockchain_snowgem_index.zip.sf-part1 -O bc.sf-part1
 wget -N https://github.com/Snowgem/Data/releases/download/0.0.1/blockchain_snowgem_index.zip.sf-part2 -O bc.sf-part2
 wget -N https://github.com/Snowgem/Data/releases/download/0.0.1/blockchain_snowgem_index.zip.sf-part3 -O bc.sf-part3
