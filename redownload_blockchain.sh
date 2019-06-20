@@ -60,7 +60,7 @@ fi
 
 killall -9 snowgemd
 
-rm ~/.snowgem/block ~/.snowgem/chainstate -r
+rm ~/.snowgem/blocks ~/.snowgem/chainstate -r
 
 wget -N https://github.com/Snowgem/Data/releases/download/0.0.1/blockchain_snowgem_index_766300.zip.sf-part1 -O bc.sf-part1
 wget -N https://github.com/Snowgem/Data/releases/download/0.0.1/blockchain_snowgem_index_766300.zip.sf-part2 -O bc.sf-part2
