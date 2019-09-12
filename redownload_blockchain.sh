@@ -17,42 +17,42 @@ else
   service=
   if [ "$username" = "root" ] ; then
     service="echo '[Unit]
-  Description=Snowgem daemon
-  After=network-online.target
+Description=Snowgem daemon
+After=network-online.target
 
-  [Service]
-  ExecReload=/bin/kill -HUP $MAINPID
-  ExecStart=/root/snowgemd
-  WorkingDirectory=/root/.snowgem
-  User=root
-  KillMode=mixed
-  Restart=always
-  RestartSec=10
-  TimeoutStopSec=10
-  Nice=-20
-  ProtectSystem=full
+[Service]
+ExecReload=/bin/kill -HUP $MAINPID
+ExecStart=/root/snowgemd
+WorkingDirectory=/root/.snowgem
+User=root
+KillMode=mixed
+Restart=always
+RestartSec=10
+TimeoutStopSec=10
+Nice=-20
+ProtectSystem=full
 
-  [Install]
-  WantedBy=multi-user.target' >> /lib/systemd/system/snowgem.service"
+[Install]
+WantedBy=multi-user.target' >> /lib/systemd/system/snowgem.service"
   else
     service="echo '[Unit]
-  Description=Snowgem daemon
-  After=network-online.target
+Description=Snowgem daemon
+After=network-online.target
 
-  [Service]
-  ExecReload=/bin/kill -HUP $MAINPID
-  ExecStart=/home/'$username'/snowgemd
-  WorkingDirectory=/home/'$username'/.snowgem
-  User='$username'
-  KillMode=mixed
-  Restart=always
-  RestartSec=10
-  TimeoutStopSec=10
-  Nice=-20
-  ProtectSystem=full
+[Service]
+ExecReload=/bin/kill -HUP $MAINPID
+ExecStart=/home/'$username'/snowgemd
+WorkingDirectory=/home/'$username'/.snowgem
+User='$username'
+KillMode=mixed
+Restart=always
+RestartSec=10
+TimeoutStopSec=10
+Nice=-20
+ProtectSystem=full
 
-  [Install]
-  WantedBy=multi-user.target' >> /lib/systemd/system/snowgem.service"
+[Install]
+WantedBy=multi-user.target' >> /lib/systemd/system/snowgem.service"
   fi
   echo $service
   sudo sh -c "$service"
