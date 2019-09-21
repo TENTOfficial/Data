@@ -2,9 +2,9 @@ if [ ! -d ~/.snowgem ]; then
   mkdir ~/.snowgem
 fi
 
-sudo apt-get update
-sudo apt-get install \
-      wget unzip curl libgomp1 -y
+#sudo apt-get update
+#sudo apt-get install \
+#      wget unzip curl libgomp1 -y
 
 if [ -f /lib/systemd/system/snowgem.service ]; then
 	sudo systemctl disable --now snowgem.service
